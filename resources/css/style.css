@@ -18,13 +18,22 @@ body {
 
 .large {
   width: 60%;
-  padding: 24px;
+  margin: 2rem 1.5rem;
 }
 
 .small {
   width: 35%;
   height: auto;
   padding: 1rem;
+}
+
+.float-right {
+  width: 40%;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 /* header */
@@ -35,7 +44,26 @@ header {
   background-color: white;
   border-bottom: 0.5px solid black;
   width: 100%;
+  justify-content: space-between;
 }
+
+.logo-dark {
+  color: black;
+  font-weight: bold;
+}
+
+.logo-light {
+  color: gray;
+  font-weight: normal;
+}
+
+header,
+header a {
+  color: darkgray;
+  text-decoration: none;
+}
+
+
 
 header img {
   height: 2rem;
@@ -65,19 +93,62 @@ img.mobile {
   display: none;
 }
 
+.articles img {
+  align-self: flex-start;
+
+}
+
 /* fields section */
 .study {
   background-color: lightgray;
+  padding-top: 2rem;
+}
+
+.study h2 {
+  margin-top: 0;
 }
 
 .fields {
   flex-wrap: wrap;
+  margin: 0 4.5rem 0 4.5rem;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-/* thesis exhibition */
+.field {
+  margin: 0 0 2rem 0;
+  max-width: 30%;
+  background-color: white;
+}
+
+.field.middle {
+  margin: 0 2rem 2rem 2rem;
+}
+
+.field img {
+  width: 100%;
+}
+
+.field h3 {
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.field p {
+  margin: 0.5rem 1rem 1.5rem 1rem;
+}
+
+/* thesis section */
 
 
 /* footer section */
 footer {
   border-top: 0.5px solid lightgray;
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+}
+
+footer,
+footer a {
+  color: lightgray;
+  text-decoration: none;
 }
