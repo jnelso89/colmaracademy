@@ -1,0 +1,83 @@
+/* General styling */
+html,
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.main-content {
+  position: relative;
+  top: 64px; /* to account for fixed header */
+}
+
+.large {
+  width: 60%;
+  padding: 24px;
+}
+
+.small {
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
+
+/* header */
+header {
+  position: fixed;
+  z-index: 100;
+  height: 64px;
+  background-color: white;
+  border-bottom: 0.5px solid black;
+  width: 100%;
+}
+
+header img {
+  height: 2rem;
+  padding-left: 1.5rem;
+}
+
+nav li {
+  display: inline;
+  padding-left: 1rem;
+}
+
+nav li:last-child {
+  padding-right: 1.5rem;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* banner */
+.banner {
+  background-color: lightgray;
+}
+
+/* articles section */
+img.mobile {
+  display: none;
+}
+
+/* fields section */
+.study {
+  background-color: lightgray;
+}
+
+.fields {
+  flex-wrap: wrap;
+}
+
+/* thesis exhibition */
+
+
+/* footer section */
+footer {
+  border-top: 0.5px solid lightgray;
+}
