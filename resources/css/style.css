@@ -16,11 +16,6 @@ body {
   top: 64px; /* to account for fixed header */
 }
 
-.large {
-  width: 60%;
-  margin: 2rem 1.5rem;
-}
-
 .small {
   width: 35%;
   height: auto;
@@ -34,6 +29,11 @@ body {
 h2 {
   text-align: center;
   margin-top: 2rem;
+}
+
+.banner,
+.study {
+  background-color: lightgray;
 }
 
 /* header */
@@ -63,8 +63,6 @@ header a {
   text-decoration: none;
 }
 
-
-
 header img {
   height: 2rem;
   padding-left: 1.5rem;
@@ -83,29 +81,140 @@ nav li:last-child {
   display: none;
 }
 
-/* banner */
-.banner {
-  background-color: lightgray;
+@media only screen and (max-width: 760px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
 }
+
+@media only screen and (max-width: 460px) {
+  .logo span {
+    display: none;
+  }
+}
+
+/* banner */
+.banner-pic {
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.banner-pic img {
+  width: 100%;
+}
+
+a.button {
+  background-color: dimgray;
+  color: lightgray;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  width: 90%;
+}
+
+.banner-content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 760px) {
+  .banner {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner-pic {
+    width: auto;
+    margin: 0;
+  }
+
+  .banner-content {
+    width: 100%;
+  }
+
+  .banner-content h1 {
+    margin: 2rem 1rem;
+  }
+
+  .banner-content h3 {
+    margin: 0rem 1rem 1.5rem 1rem;
+  }
+
+  .banner-content .button {
+    margin: 0rem 1rem 2rem 1rem;
+  }
+}
+
 
 /* articles section */
 img.mobile {
   display: none;
 }
 
-.articles img {
-  align-self: flex-start;
+.main-article {
+  flex-direction: column;
+  width: 60%;
+  margin: 2rem 1.5rem;
+  align-items: flex-start;
+}
 
+.main-article img {
+  width: 100%;
+}
+
+.side-articles {
+  border-left: 1px solid lightgray;
+}
+
+.article {
+  border-bottom: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-article {
+    display: none;
+  }
+
+  .side-articles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .small.desktop {
+    display: none;
+  }
+
+  .article .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .article,
+  .side-articles {
+    border-style: none;
+  }
+
+  .preview h3,
+  .preview p {
+    margin: 1rem;
+  }
 }
 
 /* fields section */
 .study {
-  background-color: lightgray;
   padding-top: 2rem;
 }
 
 .study h2 {
-  margin-top: 0;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 
 .fields {
@@ -115,14 +224,14 @@ img.mobile {
   align-items: stretch;
 }
 
+.fields.mobile {
+  display: none;
+}
+
 .field {
   margin: 0 0 2rem 0;
   max-width: 30%;
   background-color: white;
-}
-
-.field.middle {
-  margin: 0 2rem 2rem 2rem;
 }
 
 .field img {
@@ -137,8 +246,60 @@ img.mobile {
   margin: 0.5rem 1rem 1.5rem 1rem;
 }
 
-/* thesis section */
+@media only screen and (max-width: 760px) {
+  .study {
+    background-color: white;
+  }
 
+  .study h2 {
+    margin-bottom: 1rem;
+  }
+
+  .fields.desktop {
+    display: none;
+  }
+
+  .fields.mobile {
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .mobile h3 {
+    padding: 1rem 1rem 1.5rem 1rem;
+    background-color: lightgray;
+    color: dimgray;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* thesis section */
+.main-thesis {
+  flex-direction: column;
+  width: 60%;
+  margin: 2rem 1.5rem;
+  align-items: flex-start;
+}
+
+.main-thesis video {
+  width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-thesis {
+    width: 100%;
+    margin: 0 0 1.5rem 0;;
+  }
+
+  .thesis-exhibit h2 {
+    margin-bottom: 1rem;
+  }
+
+  .main-thesis h3,
+  .main-thesis p,
+  .side-theses {
+    display: none;
+  }
+}
 
 /* footer section */
 footer {
@@ -151,4 +312,15 @@ footer,
 footer a {
   color: lightgray;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 760px) {
+  footer nav {
+    display: none;
+  }
+
+  footer span {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
