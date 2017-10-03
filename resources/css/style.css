@@ -2,7 +2,8 @@
 html,
 body {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #5B5B5B;
   margin: 0;
 }
 
@@ -26,14 +27,18 @@ body {
   width: 40%;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
 h2 {
   text-align: center;
   margin-top: 2rem;
+  font-size: 2.5rem;
 }
 
-.banner,
-.study {
-  background-color: lightgray;
+h3 {
+  font-size: 1.5rem;
 }
 
 /* header */
@@ -42,24 +47,24 @@ header {
   z-index: 100;
   height: 64px;
   background-color: white;
-  border-bottom: 0.5px solid dimgray;
+  border-bottom: 0.5px solid #D1CBCB;
   width: 100%;
   justify-content: space-between;
 }
 
 .logo-dark {
-  color: black;
+  color: #BF2F2F;
   font-weight: bold;
 }
 
 .logo-light {
-  color: gray;
+  color: #D1CBCB;
   font-weight: normal;
 }
 
 header,
 header a {
-  color: darkgray;
+  color: #5B5B5B;
   text-decoration: none;
 }
 
@@ -77,8 +82,20 @@ nav li:last-child {
   padding-right: 1.5rem;
 }
 
+nav li a:hover {
+  color: #BF2F2F;
+  font-weight: bold;
+}
+
 .mobile-nav {
   display: none;
+  padding-right: 1.5rem;
+}
+
+.mobile-nav a:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
 }
 
 @media only screen and (max-width: 760px) {
@@ -98,6 +115,10 @@ nav li:last-child {
 }
 
 /* banner */
+.banner {
+  background-color: #D1CBCB;
+}
+
 .banner-pic {
   width: 60%;
   margin: 2rem 1.5rem;
@@ -107,18 +128,38 @@ nav li:last-child {
   width: 100%;
 }
 
+.banner h1 {
+  color: #BF2F2F;
+  line-height: 0.9;
+}
+
 a.button {
-  background-color: dimgray;
-  color: lightgray;
+  background-color: #BF2F2F;
+  color: #E9E6E6;
+  opacity: 0.6;
   padding: 0.5rem;
   text-decoration: none;
   text-align: center;
   width: 90%;
+  border-radius: 4px;
+  transition: 500ms all ease-in-out;
+}
+
+a.button:hover {
+  opacity: 1;
+}
+
+a.button:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
 }
 
 .banner-content {
   flex-direction: column;
   align-items: flex-start;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
 }
 
 @media only screen and (max-width: 760px) {
@@ -147,6 +188,10 @@ a.button {
   .banner-content .button {
     margin: 0rem 1rem 2rem 1rem;
   }
+
+  a.button {
+    opacity: 1;
+  }
 }
 
 
@@ -164,18 +209,35 @@ img.mobile {
   align-items: flex-start;
   width: 60%;
   padding: 2rem 1.5rem;
-  border-right: 1px solid lightgray;
+  border-right: 1px solid #E9E6E6;
 }
 
 .main-article img {
   width: 100%;
 }
 
+.main-article span {
+  font-style: italic;
+}
+
 .side-articles {
   margin-top: 1rem;
+  padding-right: 1rem;
 }
 .article {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #E9E6E6;
+}
+
+.article:hover {
+  background-color: #E9E6E6;
+}
+
+.article a {
+  color: #5B5B5B;
+}
+
+.article a:hover {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 760px) {
@@ -204,16 +266,22 @@ img.mobile {
     border-style: none;
     margin: 1rem;
   }
+
+  .article:hover {
+    background-color: white;
+  }
 }
 
 /* fields section */
 .study {
   padding-top: 2rem;
+  background-color: #E9E6E6;
 }
 
 .study h2 {
   margin-top: 0rem;
   margin-bottom: 2rem;
+  color: #BF2F2F;
 }
 
 .fields {
@@ -228,7 +296,7 @@ img.mobile {
 }
 
 .fields.mobile a {
-  color: dimgray;
+  color: #5B5B5B;
   text-decoration: none;
 }
 
@@ -236,14 +304,33 @@ img.mobile {
   margin: 0 0 2rem 0;
   max-width: 30%;
   background-color: white;
+  border-radius: 4px;
+}
+
+.field:hover {
+  box-shadow: 4px 4px #BF2F2F;
+  position: relative;
+  bottom: 2px;
+  right: 2px;
 }
 
 .field img {
   width: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
 .field h3 {
   margin: 1rem 1rem 0rem 1rem;
+}
+
+.field a {
+  color: #5B5B5B;
+  text-decoration: none;
+}
+
+.field a:hover {
+  color: #BF2F2F;
 }
 
 .field p {
@@ -253,8 +340,8 @@ img.mobile {
 @media only screen and (max-width: 760px) {
   .study {
     background-color: white;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid #E9E6E6;
+    border-bottom: 1px solid #E9E6E6;
   }
 
   .study h2 {
@@ -272,14 +359,22 @@ img.mobile {
 
   .mobile h3 {
     padding: 1rem 1rem 1.5rem 1rem;
-    background-color: lightgray;
-    color: dimgray;
+    background-color: #E9E6E6;
+    color: #5B5B5B;
     margin-bottom: 0.5rem;
     margin-top: 0;
+  }
+
+  .mobile a:active {
+    color: #BF2F2F;
   }
 }
 
 /* thesis section */
+.thesis-exhibit h2 {
+  color: #BF2F2F;
+  }
+
 .theses {
   align-items: flex-start;
 }
@@ -297,6 +392,7 @@ img.mobile {
 
 .side-theses {
   margin-top: 2rem;
+  padding-right: 1rem;
 }
 
 @media only screen and (max-width: 760px) {
@@ -319,7 +415,7 @@ img.mobile {
 /* footer section */
 footer {
   padding: 1rem 0 2rem 1.5rem;
-  border-top: 0.5px solid lightgray;
+  border-top: 0.5px solid #E9E6E6;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -327,7 +423,7 @@ footer {
 
 footer,
 footer a {
-  color: lightgray;
+  color: #D1CBCB;
   text-decoration: none;
 }
 
