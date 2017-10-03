@@ -42,7 +42,7 @@ header {
   z-index: 100;
   height: 64px;
   background-color: white;
-  border-bottom: 0.5px solid black;
+  border-bottom: 0.5px solid dimgray;
   width: 100%;
   justify-content: space-between;
 }
@@ -155,11 +155,16 @@ img.mobile {
   display: none;
 }
 
+.articles {
+  align-items: flex-start;
+}
+
 .main-article {
   flex-direction: column;
-  width: 60%;
-  margin: 2rem 1.5rem;
   align-items: flex-start;
+  width: 60%;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid lightgray;
 }
 
 .main-article img {
@@ -167,9 +172,8 @@ img.mobile {
 }
 
 .side-articles {
-  border-left: 1px solid lightgray;
+  margin-top: 1rem;
 }
-
 .article {
   border-bottom: 1px solid lightgray;
 }
@@ -184,7 +188,6 @@ img.mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
   }
 
   .small.desktop {
@@ -199,10 +202,6 @@ img.mobile {
   .article,
   .side-articles {
     border-style: none;
-  }
-
-  .preview h3,
-  .preview p {
     margin: 1rem;
   }
 }
@@ -228,6 +227,11 @@ img.mobile {
   display: none;
 }
 
+.fields.mobile a {
+  color: dimgray;
+  text-decoration: none;
+}
+
 .field {
   margin: 0 0 2rem 0;
   max-width: 30%;
@@ -249,6 +253,8 @@ img.mobile {
 @media only screen and (max-width: 760px) {
   .study {
     background-color: white;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
   }
 
   .study h2 {
@@ -261,7 +267,7 @@ img.mobile {
 
   .fields.mobile {
     display: block;
-    padding-bottom: 2rem;
+    margin: 1rem 1rem 2rem 1rem;
   }
 
   .mobile h3 {
@@ -269,19 +275,28 @@ img.mobile {
     background-color: lightgray;
     color: dimgray;
     margin-bottom: 0.5rem;
+    margin-top: 0;
   }
 }
 
 /* thesis section */
+.theses {
+  align-items: flex-start;
+}
+
 .main-thesis {
   flex-direction: column;
+  align-items: flex-start;
   width: 60%;
   margin: 2rem 1.5rem;
-  align-items: flex-start;
 }
 
 .main-thesis video {
   width: 100%;
+}
+
+.side-theses {
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 760px) {
@@ -303,9 +318,11 @@ img.mobile {
 
 /* footer section */
 footer {
+  padding: 1rem 0 2rem 1.5rem;
   border-top: 0.5px solid lightgray;
-  padding: 1rem 1.5rem;
+  display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 footer,
@@ -314,13 +331,21 @@ footer a {
   text-decoration: none;
 }
 
+footer ul {
+  margin: 0;
+}
+
 @media only screen and (max-width: 760px) {
   footer nav {
     display: none;
   }
 
+  footer {
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+  }
+
   footer span {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 }
